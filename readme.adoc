@@ -1,0 +1,8 @@
+
+experiemnt where plotting version checks done on jbang.dev.
+
+test it by cloning this repo and run:
+
+```
+jbang httpd@jbangdev
+```
