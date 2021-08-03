@@ -15,12 +15,30 @@
 	article { display: block; text-align: center; width: 650px; margin: 0 auto; }
 	a { color: #dc8100; text-decoration: none; }
 	a:hover { color: #333; text-decoration: none; }
+
+
+	.menu-item {
+
+		cursor: pointer;
+		-webkit-transition: all 0.1s ease-out;
+	}
+
+	.menu-item:hover, .menu-item.active {
+		font-size: 23px;
+		color: #fff;
+	}
+
       </style>
       
       <body>
 
 	<h1>JBang version check Globe</h1>
 	<p>Below is a visualization of recent <a href="https://www.jbang.dev/documentation/guide/latest/installation.html#version-check">version checks</a> done by JBang users world wide. </p>
+	<div id="menu">
+		<span id="autorotate" class="menu-item">Stop Spin</span>
+	      </div>
+	     
+
 	<div id="globeViz"></div>
       
 	<script>
@@ -49,5 +67,11 @@
 	  // Add auto-rotation
 	  world.controls().autoRotate = true;
 	  world.controls().autoRotateSpeed = 1.5;
+
+	  document.getElementById("autorotate").onclick = function (e) {
+  		world.controls().autoRotate = !world.controls().autoRotate;
+  		e.target.textContent = world.controls().autoRotate ? "Stop Spin" : "Start Spin";
+	};
+
 	</script>
       </body>

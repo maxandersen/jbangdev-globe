@@ -6,3 +6,5 @@ test it by cloning this repo and run:
 ```
 jbang httpd@jbangdev
 ```
+
+or see snapshot at https://maxandersen.github.io/jbangdev-globe/
